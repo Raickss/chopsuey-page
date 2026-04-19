@@ -1,0 +1,294 @@
+<section>
+  <!-- Hero -->
+  <header class="mx-auto max-w-3xl px-6 pt-20 pb-16 text-center md:pt-28">
+    <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Restaurante · Desde {{ foundedIn }}</p>
+    <h1 class="mt-4 font-serif text-5xl leading-[1.05] text-gray-900 md:text-7xl">
+      Chopsuey Pereira
+    </h1>
+    <div class="mx-auto mt-7 h-px w-12 bg-red-800"></div>
+    <p class="mx-auto mt-7 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
+      Especialistas en arroz chino y cocina oriental en el corazón de Pereira.
+    </p>
+
+    <a
+      routerLink="/menu"
+      class="mt-10 inline-flex items-center gap-2 border-b border-gray-300 pb-1 text-xs tracking-[0.2em] text-gray-900 uppercase transition-colors hover:border-red-800 hover:text-red-800"
+    >
+      Ver nuestro menú
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-3.5 w-3.5"
+        aria-hidden="true"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </svg>
+    </a>
+  </header>
+
+  <!-- Tradición -->
+  <section class="mx-auto max-w-3xl px-6 pt-4 pb-16 text-center">
+    <p class="font-serif text-7xl leading-none text-red-800 md:text-8xl">
+      {{ yearsOfExperience }}
+    </p>
+    <p class="mt-4 text-xs tracking-[0.3em] text-gray-500 uppercase">Años de tradición</p>
+    <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-gray-600">
+      Desde <span class="font-medium text-gray-900">{{ foundedIn }}</span> sirviendo el auténtico
+      arroz chino y los sabores de la cocina oriental a la mesa de los pereiranos.
+    </p>
+  </section>
+
+  <!-- Horario y servicios -->
+  <section class="mx-auto max-w-4xl px-6 pb-20">
+    <div class="text-center">
+      <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Horario</p>
+      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Abrimos todos los días</h2>
+      <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-600">
+        De <span class="font-medium text-gray-900">10:00 a.m.</span> a
+        <span class="font-medium text-gray-900">9:00 p.m.</span>, incluidos fines de semana y
+        festivos.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-12 grid max-w-3xl gap-10 sm:grid-cols-3 sm:gap-8">
+      <article class="text-center">
+        <span
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </span>
+        <h3 class="mt-4 text-[11px] font-semibold tracking-[0.22em] text-gray-900 uppercase">
+          En el local
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          Ven al restaurante: come en nuestro salón o compra en caja para llevar.
+        </p>
+      </article>
+
+      <article class="text-center">
+        <span
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+        </span>
+        <h3 class="mt-4 text-[11px] font-semibold tracking-[0.22em] text-gray-900 uppercase">
+          Para recoger
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          Llámanos, ordena con anticipación y pasa a recoger cuando esté listo.
+        </p>
+      </article>
+
+      <article class="text-center">
+        <span
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <rect x="1" y="3" width="15" height="13" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+        </span>
+        <h3 class="mt-4 text-[11px] font-semibold tracking-[0.22em] text-gray-900 uppercase">
+          A domicilio
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          Pide por teléfono y te lo llevamos hasta tu puerta.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <div class="mx-auto max-w-4xl px-6 pb-24">
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Visítanos -->
+      <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </span>
+          <h2 class="font-serif text-2xl text-gray-900">Visítanos</h2>
+        </div>
+
+        <address class="mt-5 text-base leading-relaxed text-gray-700 not-italic">
+          Calle 20 No. 8-58<br />
+          Pereira · Risaralda
+        </address>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Calle%2020%20No.%208-58%20Pereira%20Risaralda"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.18em] text-gray-600 uppercase transition-colors hover:text-red-800"
+        >
+          Ver en el mapa
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-3.5 w-3.5"
+            aria-hidden="true"
+          >
+            <path d="M7 17L17 7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </article>
+
+      <!-- Servicio a domicilio -->
+      <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+          </span>
+          <h2 class="font-serif text-2xl text-gray-900">Servicio a domicilio</h2>
+        </div>
+
+        <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+          <li>
+            <a
+              href="tel:+576063413352"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+            >
+              <span class="text-[10px] tracking-widest text-gray-400 uppercase">PBX</span>
+              606 341 3352
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+573203209999"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+            >
+              <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
+              320 320 9999
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+573213213333"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+            >
+              <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
+              321 321 3333
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+573136666200"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+            >
+              <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
+              313 666 6200
+            </a>
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Nota anti-estafa -->
+    <aside
+      class="mt-6 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-5"
+      role="note"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mt-0.5 h-5 w-5 shrink-0 text-amber-700"
+        aria-hidden="true"
+      >
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+        <line x1="12" y1="9" x2="12" y2="13" />
+        <line x1="12" y1="17" x2="12.01" y2="17" />
+      </svg>
+      <p class="text-sm leading-relaxed text-amber-900">
+        <strong class="font-semibold">Aviso importante:</strong>
+        solo recibimos pedidos por <strong>llamada</strong> a los números oficiales o directamente
+        en el <strong>local</strong>. La única cuenta aceptada para transferencias es
+        <strong>Bancolombia a nombre de Restaurante Chopsuey</strong>. Cualquier otro banco,
+        cuenta, nombre, canal o persona que ofrezca pedidos a nombre del restaurante es una
+        <strong>estafa</strong>.
+      </p>
+    </aside>
+  </div>
+</section>

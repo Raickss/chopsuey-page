@@ -1,0 +1,32 @@
+<header
+  class="sticky top-0 z-10 border-b border-gray-100 bg-[#fffaf3]/90 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 max-[720px]:px-4 max-[720px]:py-3"
+  >
+    <a
+      routerLink="/"
+      class="font-serif text-base tracking-wide text-gray-900 transition-colors hover:text-red-800 md:text-lg max-[480px]:text-sm"
+    >
+      Restaurante Chopsuey Pereira
+    </a>
+
+    <nav class="flex items-center gap-5 text-[11px] tracking-[0.22em] uppercase md:gap-7 md:text-xs">
+      <a
+        routerLink="/"
+        routerLinkActive="text-red-800! border-red-800!"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="border-b border-transparent py-1 text-gray-500 transition-colors hover:text-red-800"
+      >
+        Inicio
+      </a>
+      <a
+        routerLink="/menu"
+        routerLinkActive="text-red-800! border-red-800!"
+        class="border-b border-transparent py-1 text-gray-500 transition-colors hover:text-red-800"
+      >
+        Menú
+      </a>
+    </nav>
+  </div>
+</header>
