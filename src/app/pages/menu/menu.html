@@ -16,6 +16,7 @@
           <li class="shrink-0">
             <button
               type="button"
+              [attr.data-chip]="category.id"
               (click)="scrollTo(category.id)"
               class="whitespace-nowrap transition-colors"
               [class]="chipClasses(category.id)"

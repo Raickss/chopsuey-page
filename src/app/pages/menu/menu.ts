@@ -27,7 +27,12 @@ export class Menu {
             .filter((e) => e.isIntersecting)
             .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
           if (visible) {
-            this.activeCategory.set(visible.target.id);
+            const id = visible.target.id;
+            if (this.activeCategory() !== id) {
+              this.activeCategory.set(id);
+              const chip = document.querySelector<HTMLElement>(`[data-chip="${id}"]`);
+              chip?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
           }
         },
         { rootMargin: '-150px 0px -55% 0px' },
