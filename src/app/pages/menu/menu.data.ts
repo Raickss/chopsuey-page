@@ -13,6 +13,7 @@ export interface MenuItem {
 export interface MenuCategory {
   id: string;
   title: string;
+  shortTitle?: string;
   note?: string;
   items: MenuItem[];
 }
@@ -81,6 +82,16 @@ export const MENU: MenuCategory[] = [
         ],
       },
       {
+        name: 'Arroz a la Valenciana',
+        description:
+          'Arroz frito con trozos de cerdo, jamón, camarones y verduras salteadas (raíces, habichuela, cebolla y zanahoria), viene acompañado de pollo frito crujiente por fuera y jugoso por dentro.',
+        sizes: [
+          { label: 'Grande', price: 72000 },
+          { label: 'Mediana', price: 59000 },
+          { label: 'Pequeña', price: 32000 },
+        ],
+      },
+      {
         name: 'Arroz con Pollo',
         description:
           'Arroz frito con pechugas de pollo, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
@@ -106,16 +117,6 @@ export const MENU: MenuCategory[] = [
         sizes: [
           { label: 'Grande', price: 74000 },
           { label: 'Mediana', price: 64000 },
-        ],
-      },
-      {
-        name: 'Arroz a la Valenciana',
-        description:
-          'Arroz frito con trozos de cerdo, jamón, camarones y verduras salteadas (raíces, habichuela, cebolla y zanahoria), viene acompañado de pollo frito crujiente por fuera y jugoso por dentro.',
-        sizes: [
-          { label: 'Grande', price: 72000 },
-          { label: 'Mediana', price: 59000 },
-          { label: 'Pequeña', price: 32000 },
         ],
       },
       {
@@ -262,6 +263,7 @@ export const MENU: MenuCategory[] = [
   {
     id: 'chuletas-y-platos-fuertes',
     title: 'Chuletas y Platos Fuertes',
+    shortTitle: 'Platos Fuertes',
     note: 'Todos los pedidos traen arroz frito (negro con salsa de soya o amarillo con salsa de tomate).',
     items: [
       {
@@ -348,23 +350,27 @@ export const MENU: MenuCategory[] = [
     title: 'Bebidas',
     items: [
       { name: 'Coca-Cola 1.5 L', description: 'Original o Zero', price: 10000 },
-      {
-        name: 'Gaseosas 350 ml',
-        description:
-          'Coca-cola, Premio, Sprite, Uva, Tamarindo, Naranja, Coca-cola cero, Manzana, Bretaña',
-        price: 5000,
-      },
-      { name: 'Agua 600 ml', description: '', price: 5000 },
       { name: 'Manzana 2.5 L', description: '', price: 10000 },
+      {
+        name: 'Jugo en leche',
+        description: 'Mango, Maracuyá, Mora, Guanábana',
+        price: 8000,
+      },
       {
         name: 'Jugo en agua',
         description: 'Mango, Maracuyá, Mora, Guanábana, Limonada',
         price: 6000,
       },
       {
-        name: 'Jugo en leche',
-        description: 'Mango, Maracuyá, Mora, Guanábana',
-        price: 8000,
+        name: 'Gaseosas 350 ml',
+        description: 'Coca-cola, Coca-cola cero, Manzana Postobón, Bretaña, Naranja',
+        price: 5000,
+      },
+      { name: 'Agua 600 ml', description: '', price: 5000 },
+      {
+        name: 'Jugo Hit 350 ml',
+        description: 'Mango, Mora',
+        price: 5000,
       },
     ],
   },

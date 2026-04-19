@@ -1,7 +1,9 @@
 <section>
   <!-- Hero -->
   <header class="mx-auto max-w-3xl px-6 pt-20 pb-16 text-center md:pt-28">
-    <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Restaurante · Desde {{ foundedIn }}</p>
+    <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">
+      Restaurante · Desde {{ foundedIn }}
+    </p>
     <h1 class="mt-4 font-serif text-5xl leading-[1.05] text-gray-900 md:text-7xl">
       Chopsuey Pereira
     </h1>
@@ -44,16 +46,11 @@
     </p>
   </section>
 
-  <!-- Horario y servicios -->
+  <!-- Cómo pedir -->
   <section class="mx-auto max-w-4xl px-6 pb-20">
     <div class="text-center">
-      <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Horario</p>
-      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Abrimos todos los días</h2>
-      <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-gray-600">
-        De <span class="font-medium text-gray-900">10:00 a.m.</span> a
-        <span class="font-medium text-gray-900">9:00 p.m.</span>, incluidos fines de semana y
-        festivos.
-      </p>
+      <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Cómo pedir</p>
+      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Tres formas de disfrutar</h2>
     </div>
 
     <div class="mx-auto mt-12 grid max-w-3xl gap-10 sm:grid-cols-3 sm:gap-8">
@@ -145,11 +142,18 @@
 
   <!-- Contacto -->
   <div class="mx-auto max-w-4xl px-6 pb-24">
+    <div class="mb-10 text-center">
+      <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Contacto</p>
+      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Encuéntranos</h2>
+    </div>
+
     <div class="grid gap-6 md:grid-cols-2">
-      <!-- Visítanos -->
+      <!-- Visítanos (dirección + horario) -->
       <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <div class="flex items-center gap-3">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -165,13 +169,35 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
-          <h2 class="font-serif text-2xl text-gray-900">Visítanos</h2>
+          <h3 class="font-serif text-2xl text-gray-900">Visítanos</h3>
         </div>
 
         <address class="mt-5 text-base leading-relaxed text-gray-700 not-italic">
           Calle 20 No. 8-58<br />
           Pereira · Risaralda
         </address>
+
+        <div class="mt-5 flex items-start gap-2.5 border-t border-gray-100 pt-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mt-0.5 h-4 w-4 shrink-0 text-red-800"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <div class="text-sm leading-relaxed text-gray-700">
+            <p>Abierto todos los días</p>
+            <p class="font-medium text-gray-900">10:00 a.m. – 9:00 p.m.</p>
+            <p class="mt-1 text-xs text-gray-500">Incluidos fines de semana y festivos</p>
+          </div>
+        </div>
 
         <a
           href="https://www.google.com/maps/search/?api=1&query=Calle%2020%20No.%208-58%20Pereira%20Risaralda"
@@ -197,10 +223,12 @@
         </a>
       </article>
 
-      <!-- Servicio a domicilio -->
+      <!-- Llámanos -->
       <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <div class="flex items-center gap-3">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -217,8 +245,12 @@
               />
             </svg>
           </span>
-          <h2 class="font-serif text-2xl text-gray-900">Servicio a domicilio</h2>
+          <h3 class="font-serif text-2xl text-gray-900">Llámanos</h3>
         </div>
+
+        <p class="mt-3 text-sm text-gray-500">
+          Para domicilio o para ordenar y pasar a recoger.
+        </p>
 
         <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
           <li>
@@ -283,10 +315,10 @@
       </svg>
       <p class="text-sm leading-relaxed text-amber-900">
         <strong class="font-semibold">Aviso importante:</strong>
-        solo recibimos pedidos por <strong>llamada</strong> a los números oficiales o directamente
-        en el <strong>local</strong>. La única cuenta aceptada para transferencias es
-        <strong>Bancolombia a nombre de Restaurante Chopsuey</strong>. Cualquier otro banco,
-        cuenta, nombre, canal o persona que ofrezca pedidos a nombre del restaurante es una
+        solo recibimos pedidos por <strong>llamada</strong> a los números oficiales de arriba o
+        directamente en el <strong>local</strong>.
+        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas).
+        Los pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
         <strong>estafa</strong>.
       </p>
     </aside>
