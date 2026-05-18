@@ -4,39 +4,48 @@
     <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">
       Restaurante · Desde {{ foundedIn }}
     </p>
-    <h1 class="mt-4 font-serif text-5xl leading-[1.05] text-gray-900 md:text-7xl">
+    <h1 class="mt-4 font-display text-5xl leading-[1.05] text-gray-900 md:text-7xl">
       Chopsuey Pereira
     </h1>
-    <div class="mx-auto mt-7 h-px w-12 bg-red-800"></div>
+    <div class="mx-auto mt-7 h-px w-12 bg-brand"></div>
     <p class="mx-auto mt-7 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
       Especialistas en arroz chino y cocina oriental en el corazón de Pereira.
     </p>
 
-    <a
-      routerLink="/menu"
-      class="mt-10 inline-flex items-center gap-2 border-b border-gray-300 pb-1 text-xs tracking-[0.2em] text-gray-900 uppercase transition-colors hover:border-red-800 hover:text-red-800"
-    >
-      Ver nuestro menú
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="h-3.5 w-3.5"
-        aria-hidden="true"
+    <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+      <a
+        routerLink="/menu"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-cta transition hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none"
       >
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="12 5 19 12 12 19" />
-      </svg>
-    </a>
+        Ver el menú
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a
+        href="tel:+576063413352"
+        class="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-ink-soft uppercase transition-colors hover:text-brand"
+      >
+        <span class="text-ink-muted">o llámanos</span>
+        <span class="font-medium text-ink">606 341 3352</span>
+      </a>
+    </div>
   </header>
 
   <!-- Tradición -->
   <section class="mx-auto max-w-3xl px-6 pt-4 pb-16 text-center">
-    <p class="font-serif text-7xl leading-none text-red-800 md:text-8xl">
+    <p class="font-display text-7xl leading-none text-brand md:text-8xl">
       {{ yearsOfExperience }}
     </p>
     <p class="mt-4 text-xs tracking-[0.3em] text-gray-500 uppercase">Años de tradición</p>
@@ -50,13 +59,13 @@
   <section class="mx-auto max-w-4xl px-6 pb-20">
     <div class="text-center">
       <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Cómo pedir</p>
-      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Tres formas de disfrutar</h2>
+      <h2 class="mt-3 font-display text-3xl text-gray-900 md:text-4xl">Tres formas de disfrutar</h2>
     </div>
 
     <div class="mx-auto mt-12 grid max-w-3xl gap-10 sm:grid-cols-3 sm:gap-8">
-      <article class="text-center">
+      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
         <span
-          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,9 +90,9 @@
         </p>
       </article>
 
-      <article class="text-center">
+      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
         <span
-          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -109,9 +118,9 @@
         </p>
       </article>
 
-      <article class="text-center">
+      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
         <span
-          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-800"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -141,10 +150,10 @@
   </section>
 
   <!-- Contacto -->
-  <div class="mx-auto max-w-4xl px-6 pb-24">
+  <div class="mx-auto max-w-4xl px-6 pb-16">
     <div class="mb-10 text-center">
       <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Contacto</p>
-      <h2 class="mt-3 font-serif text-3xl text-gray-900 md:text-4xl">Encuéntranos</h2>
+      <h2 class="mt-3 font-display text-3xl text-gray-900 md:text-4xl">Encuéntranos</h2>
     </div>
 
     <div class="grid gap-6 md:grid-cols-2">
@@ -152,7 +161,7 @@
       <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <div class="flex items-center gap-3">
           <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +178,7 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
-          <h3 class="font-serif text-2xl text-gray-900">Visítanos</h3>
+          <h3 class="font-display text-2xl text-gray-900">Visítanos</h3>
         </div>
 
         <address class="mt-5 text-base leading-relaxed text-gray-700 not-italic">
@@ -186,7 +195,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="mt-0.5 h-4 w-4 shrink-0 text-red-800"
+            class="mt-0.5 h-4 w-4 shrink-0 text-brand"
             aria-hidden="true"
           >
             <circle cx="12" cy="12" r="10" />
@@ -203,7 +212,7 @@
           href="https://www.google.com/maps/search/?api=1&query=Calle%2020%20No.%208-58%20Pereira%20Risaralda"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.18em] text-gray-600 uppercase transition-colors hover:text-red-800"
+          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.18em] text-gray-600 uppercase transition-colors hover:text-brand"
         >
           Ver en el mapa
           <svg
@@ -227,7 +236,7 @@
       <article class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <div class="flex items-center gap-3">
           <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-800"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +254,7 @@
               />
             </svg>
           </span>
-          <h3 class="font-serif text-2xl text-gray-900">Llámanos</h3>
+          <h3 class="font-display text-2xl text-gray-900">Llámanos</h3>
         </div>
 
         <p class="mt-3 text-sm text-gray-500">
@@ -256,7 +265,7 @@
           <li>
             <a
               href="tel:+576063413352"
-              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-brand"
             >
               <span class="text-[10px] tracking-widest text-gray-400 uppercase">PBX</span>
               606 341 3352
@@ -265,7 +274,7 @@
           <li>
             <a
               href="tel:+573203209999"
-              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-brand"
             >
               <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
               320 320 9999
@@ -274,7 +283,7 @@
           <li>
             <a
               href="tel:+573213213333"
-              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-brand"
             >
               <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
               321 321 3333
@@ -283,7 +292,7 @@
           <li>
             <a
               href="tel:+573136666200"
-              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-red-800"
+              class="inline-flex items-baseline gap-2 text-base text-gray-700 transition-colors hover:text-brand"
             >
               <span class="text-[10px] tracking-widest text-gray-400 uppercase">Cel</span>
               313 666 6200
@@ -323,4 +332,42 @@
       </p>
     </aside>
   </div>
+
+  <!-- CTA final -->
+  <section class="mx-auto max-w-3xl px-6 pb-24 text-center">
+    <p class="text-xs tracking-[0.3em] text-ink-muted uppercase">¿Listo para pedir?</p>
+    <h2 class="mt-3 font-display text-3xl text-ink md:text-4xl">
+      Explora el menú o llámanos
+    </h2>
+    <div class="mx-auto mt-5 h-px w-12 bg-brand"></div>
+    <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+      <a
+        routerLink="/menu"
+        class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-cta transition hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none"
+      >
+        Ver el menú
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a
+        href="tel:+576063413352"
+        class="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-ink-soft uppercase transition-colors hover:text-brand"
+      >
+        <span class="text-ink-muted">o llámanos</span>
+        <span class="font-medium text-ink">606 341 3352</span>
+      </a>
+    </div>
+  </section>
 </section>

@@ -8,6 +8,7 @@ export interface MenuItem {
   description?: string;
   price?: number;
   sizes?: MenuItemSize[];
+  signature?: boolean;
 }
 
 export interface MenuCategory {
@@ -28,6 +29,7 @@ export const MENU: MenuCategory[] = [
         description:
           'Sopa con huevo, pollo, cerdo, jamón, camarón, verduras (cidra, cebolla, zanahoria, apio) y espaguettis.',
         price: 16000,
+        signature: true,
       },
       {
         name: 'Consomé de Pescado',
@@ -80,6 +82,7 @@ export const MENU: MenuCategory[] = [
           { label: 'Mediana', price: 59000 },
           { label: 'Pequeña', price: 32000 },
         ],
+        signature: true,
       },
       {
         name: 'Arroz a la Valenciana',
@@ -90,6 +93,7 @@ export const MENU: MenuCategory[] = [
           { label: 'Mediana', price: 59000 },
           { label: 'Pequeña', price: 32000 },
         ],
+        signature: true,
       },
       {
         name: 'Arroz con Pollo',
@@ -140,6 +144,7 @@ export const MENU: MenuCategory[] = [
           { label: 'Grande', price: 69000 },
           { label: 'Mediana', price: 59000 },
         ],
+        signature: true,
       },
       {
         name: 'Chop Suey con Camarón',

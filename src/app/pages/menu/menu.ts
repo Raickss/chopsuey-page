@@ -57,8 +57,8 @@ export class Menu {
 
   protected chipClasses(id: string): string {
     return this.activeCategory() === id
-      ? 'font-semibold text-red-800'
-      : 'text-gray-500 hover:text-red-800';
+      ? 'font-semibold text-brand'
+      : 'text-ink-muted hover:text-brand';
   }
 
   protected openContact(): void {
