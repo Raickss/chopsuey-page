@@ -78,9 +78,9 @@ export const MENU: MenuCategory[] = [
         description:
           'Arroz frito con pechugas de pollo, trozos de cerdo, jamón y camarones, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 61000 },
-          { label: 'Mediana', price: 59000 },
-          { label: 'Pequeña', price: 32000 },
+          { label: 'Grande', price: 68000 },
+          { label: 'Mediana', price: 60000 },
+          { label: 'Pequeña', price: 33000 },
         ],
         signature: true,
       },
@@ -89,9 +89,9 @@ export const MENU: MenuCategory[] = [
         description:
           'Arroz frito con trozos de cerdo, jamón, camarones y verduras salteadas (raíces, habichuela, cebolla y zanahoria), viene acompañado de pollo frito crujiente por fuera y jugoso por dentro.',
         sizes: [
-          { label: 'Grande', price: 72000 },
-          { label: 'Mediana', price: 59000 },
-          { label: 'Pequeña', price: 32000 },
+          { label: 'Grande', price: 73000 },
+          { label: 'Mediana', price: 60000 },
+          { label: 'Pequeña', price: 33000 },
         ],
         signature: true,
       },
@@ -100,9 +100,9 @@ export const MENU: MenuCategory[] = [
         description:
           'Arroz frito con pechugas de pollo, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 61000 },
-          { label: 'Mediana', price: 59000 },
-          { label: 'Pequeña', price: 32000 },
+          { label: 'Grande', price: 68000 },
+          { label: 'Mediana', price: 60000 },
+          { label: 'Pequeña', price: 33000 },
         ],
       },
       {
@@ -110,8 +110,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Arroz frito con camarones, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 79000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 80000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -119,15 +119,15 @@ export const MENU: MenuCategory[] = [
         description:
           'Arroz frito con pechugas de pollo y camarones, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 74000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 75000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
         name: 'Arroz con Mariscos',
         description:
           'Arroz frito con camarones, pescado, calamar, langostinos y palmitos de cangrejo, acompañado de verduras salteadas (raíces, habichuela, cebolla y zanahoria).',
-        sizes: [{ label: 'Grande', price: 79000 }],
+        sizes: [{ label: 'Grande', price: 80000 }],
       },
     ],
   },
@@ -141,8 +141,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Surtido de verduras (cidra, apio, cebolla, zanahoria) cocinadas al vapor con trozos de pollo, cerdo, jamón y camarones.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
         signature: true,
       },
@@ -151,8 +151,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Surtido de verduras (cidra, apio, cebolla, zanahoria) cocinadas al vapor con camarones.',
         sizes: [
-          { label: 'Grande', price: 79000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 80000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -160,8 +160,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Surtido de verduras (cidra, apio, cebolla, zanahoria) cocinadas al vapor con trozos de pollo.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -169,8 +169,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Surtido de verduras (cidra, apio, cebolla, zanahoria) cocinadas al vapor con trozos de pollo y camarones.',
         sizes: [
-          { label: 'Grande', price: 74000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 75000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -178,8 +178,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Preparado en salsa a base de tomate, con trozos de pollo, cerdo, jamón y camarones acompañado de tiras de verdura fresca (cebolla, habichuela, zanahoria).',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -187,8 +187,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Preparado en salsa de tomate con camarones acompañado de tiras de verduras frescas (cebolla, habichuela y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 79000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 80000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -196,8 +196,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Preparado en salsa de tomate con trozos de pollo, acompañado de tiras de verduras frescas (cebolla, habichuela y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -205,8 +205,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Preparado en salsa de tomate con trozos de pollo y camarones, acompañado de tiras de verduras frescas (cebolla, habichuela y zanahoria).',
         sizes: [
-          { label: 'Grande', price: 74000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 75000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -214,8 +214,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Tortillas esponjosas a base de huevo, con trozos de pollo acompañadas de verduras frescas (cebolla, habichuela, zanahoria). Viene con papas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -223,8 +223,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Tortillas esponjosas a base de huevo, con trozos de pollo y camarones acompañadas de verduras frescas (cebolla, habichuela, zanahoria). Viene con papas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 74000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 75000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -232,8 +232,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Tortillas esponjosas a base de huevo, con camarones acompañada de verduras frescas (cebolla, habichuela, zanahoria). Viene con papas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 79000 },
-          { label: 'Mediana', price: 64000 },
+          { label: 'Grande', price: 80000 },
+          { label: 'Mediana', price: 65000 },
         ],
       },
       {
@@ -241,8 +241,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Tortillas esponjosas a base de huevo, con trozos de pollo, cerdo, jamón y camarones acompañada de verduras frescas (cebolla, habichuela, zanahoria). Viene con papas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -250,8 +250,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Pollo frito, bañado en salsa, estilo fricase, preparada con verduras gruesas (cebolla, apio, pimentón, zanahoria, cidra y coliflor).',
         sizes: [
-          { label: 'Grande', price: 71000 },
-          { label: 'Mediana', price: 61000 },
+          { label: 'Grande', price: 72000 },
+          { label: 'Mediana', price: 62000 },
         ],
       },
       {
@@ -259,8 +259,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Pollo frito, bañado en salsa negra, acompañado de papitas fritas en casco.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
     ],
@@ -275,32 +275,32 @@ export const MENU: MenuCategory[] = [
         name: 'Chuleta de Cerdo',
         description: 'Filete de cerdo apanado, acompañado de papitas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
         name: 'Chuleta de Pescado',
         description: 'Filete de pescado merluza apanado, acompañado de papitas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
         name: 'Chuleta de Pollo',
         description: 'Filete de pollo apanado, acompañado de papitas fritas en cascos.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
         name: 'Agridulce de Pollo',
         description: 'Deliciosos trozos de pollo rebozados, bañados en salsa agridulce con piña.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
       {
@@ -308,8 +308,8 @@ export const MENU: MenuCategory[] = [
         description:
           'Solomo de res a la plancha, bañado en salsa de tu elección (salsa negra o criolla), acompañado de papita frita en casco.',
         sizes: [
-          { label: 'Grande', price: 69000 },
-          { label: 'Mediana', price: 59000 },
+          { label: 'Grande', price: 70000 },
+          { label: 'Mediana', price: 60000 },
         ],
       },
     ],
@@ -323,7 +323,7 @@ export const MENU: MenuCategory[] = [
         name: 'Pollo entero',
         description:
           'Arroz frito con pollo y medio, papas en casco, ensalada de repollo y zanahoria.',
-        price: 86000,
+        price: 87000,
       },
     ],
   },
@@ -376,6 +376,11 @@ export const MENU: MenuCategory[] = [
         name: 'Jugo Hit 350 ml',
         description: 'Mango, Mora',
         price: 5000,
+      },
+      {
+        name: 'Jugo Hit 600 ml',
+        description: 'Mango, Mora',
+        price: 6000,
       },
     ],
   },
