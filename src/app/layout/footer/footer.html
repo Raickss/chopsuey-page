@@ -1,22 +1,22 @@
-<footer class="bg-gray-800 text-gray-200">
+<footer class="border-t-[3px] border-double border-gold bg-brand-dark text-cream">
   <div class="mx-auto max-w-5xl px-6 py-12">
     <div class="grid gap-10 md:grid-cols-3 md:gap-12">
       <!-- Visítanos -->
       <section class="text-center md:text-left">
-        <h3 class="text-xs tracking-[0.2em] text-gold uppercase">Visítanos</h3>
-        <address class="mt-4 text-sm leading-relaxed text-gray-300 not-italic">
-          Calle 20 No. 8-58<br />
-          Pereira · Risaralda
+        <h3 class="etiqueta-carta text-gold-light">Visítanos</h3>
+        <address class="mt-4 font-display text-base leading-relaxed text-cream not-italic">
+          {{ negocio.direccion.calle }}<br />
+          {{ negocio.direccion.ciudad }} · {{ negocio.direccion.departamento }}
         </address>
-        <p class="mt-3 text-xs leading-relaxed text-gray-400">
-          Abierto todos los días<br />
-          10:00 a.m. – 9:00 p.m.
+        <p class="mt-3 text-xs leading-relaxed text-cream/70">
+          Abierto {{ negocio.horario.dias.toLowerCase() }}<br />
+          {{ negocio.horario.apertura }} – {{ negocio.horario.cierre }}
         </p>
         <a
-          href="https://www.google.com/maps/search/?api=1&query=Calle%2020%20No.%208-58%20Pereira%20Risaralda"
+          [href]="negocio.direccion.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-3 inline-flex items-center gap-1.5 text-xs tracking-wider text-gray-400 uppercase transition-colors hover:text-gold"
+          class="mt-3 inline-flex items-center gap-1.5 text-xs tracking-wider text-cream/70 uppercase transition-colors hover:text-gold-light"
         >
           Ver en el mapa
           <svg
@@ -38,79 +38,53 @@
 
       <!-- Pedidos -->
       <section class="text-center md:text-left">
-        <h3 class="text-xs tracking-[0.2em] text-gold uppercase">Pedidos a domicilio</h3>
-        <ul class="mt-4 space-y-1.5 text-sm text-gray-300">
-          <li>
-            <a
-              href="tel:+576063413352"
-              class="inline-flex items-baseline gap-2 transition-colors hover:text-gold"
-            >
-              <span class="text-[10px] tracking-widest text-gray-500 uppercase">PBX</span>
-              606 341 3352
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:+573203209999"
-              class="inline-flex items-baseline gap-2 transition-colors hover:text-gold"
-            >
-              <span class="text-[10px] tracking-widest text-gray-500 uppercase">Cel</span>
-              320 320 9999
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:+573213213333"
-              class="inline-flex items-baseline gap-2 transition-colors hover:text-gold"
-            >
-              <span class="text-[10px] tracking-widest text-gray-500 uppercase">Cel</span>
-              321 321 3333
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:+573136666200"
-              class="inline-flex items-baseline gap-2 transition-colors hover:text-gold"
-            >
-              <span class="text-[10px] tracking-widest text-gray-500 uppercase">Cel</span>
-              313 666 6200
-            </a>
-          </li>
+        <h3 class="etiqueta-carta text-gold-light">Pedidos a domicilio</h3>
+        <ul class="mt-4 space-y-1.5">
+          @for (telefono of negocio.telefonos; track telefono.tel) {
+            <li>
+              <a
+                [href]="'tel:' + telefono.tel"
+                class="inline-flex items-baseline gap-2 transition-colors hover:text-gold-light"
+              >
+                <span class="text-[10px] tracking-widest text-cream/70 uppercase">
+                  {{ telefono.etiqueta }}
+                </span>
+                <span class="font-display text-base">{{ telefono.display }}</span>
+              </a>
+            </li>
+          }
         </ul>
       </section>
 
-      <!-- Redes -->
+      <!-- Síguenos -->
       <section class="text-center md:text-left">
-        <h3 class="text-xs tracking-[0.2em] text-gold uppercase">Síguenos</h3>
+        <h3 class="etiqueta-carta text-gold-light">Síguenos</h3>
         <a
-          href="https://www.instagram.com/chopsuey.pereira"
+          [href]="negocio.instagram.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-gold"
-          aria-label="Instagram Chopsuey Pereira"
+          class="mt-4 inline-flex items-center gap-2 text-sm text-cream/80 transition-colors hover:text-gold-light"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke-width="1.8"
             class="h-4 w-4"
             aria-hidden="true"
           >
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
           </svg>
-          <span>&#64;chopsuey.pereira</span>
+          {{ '@' + negocio.instagram.usuario }}
         </a>
       </section>
     </div>
 
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-      © {{ currentYear }} Restaurante Chopsuey Pereira
-    </div>
+    <p class="mt-10 border-t border-cream/15 pt-6 text-center text-xs text-cream/70">
+      © {{ currentYear }} {{ negocio.nombre }}
+    </p>
   </div>
 </footer>

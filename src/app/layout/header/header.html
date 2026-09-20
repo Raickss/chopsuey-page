@@ -1,31 +1,33 @@
 <header
-  class="z-10 border-b border-gray-100 bg-[#fffaf3]/90 backdrop-blur"
+  class="z-10 border-b-2 border-gold bg-brand"
   [class.sticky]="!isMenuRoute()"
   [class.top-0]="!isMenuRoute()"
 >
   <div
-    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 max-[720px]:px-4 max-[720px]:py-3"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3.5 max-[720px]:px-4 max-[720px]:py-3"
   >
     <a
       routerLink="/"
-      class="font-display text-base tracking-wide text-gray-900 transition-colors hover:text-brand md:text-lg max-[480px]:text-sm"
+      class="font-display text-base font-semibold tracking-wide text-cream transition-colors hover:text-gold-soft md:text-lg max-[480px]:text-sm"
     >
       Restaurante Chopsuey Pereira
     </a>
 
-    <nav class="flex items-center gap-5 text-[11px] tracking-[0.22em] uppercase md:gap-7 md:text-xs">
+    <nav
+      class="flex items-center gap-5 text-[11px] tracking-[0.22em] uppercase md:gap-7 md:text-xs"
+    >
       <a
         routerLink="/"
-        routerLinkActive="text-brand! border-brand!"
+        routerLinkActive="text-cream! border-gold!"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="border-b border-transparent py-1 text-gray-500 transition-colors hover:text-brand"
+        class="border-b-2 border-transparent py-1 text-cream/70 transition-colors hover:text-cream"
       >
         Inicio
       </a>
       <a
         routerLink="/menu"
-        routerLinkActive="text-brand! border-brand!"
-        class="border-b border-transparent py-1 text-gray-500 transition-colors hover:text-brand"
+        routerLinkActive="text-cream! border-gold!"
+        class="border-b-2 border-transparent py-1 text-cream/70 transition-colors hover:text-cream"
       >
         Menú
       </a>

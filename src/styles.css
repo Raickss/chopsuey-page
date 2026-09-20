@@ -1,33 +1,87 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-brand: #9b1c1c;
   --color-brand-dark: #7a1515;
   --color-brand-soft: #fdf2f2;
   --color-gold: #b8860b;
+  --color-gold-ink: #8a6508;
+  --color-gold-light: #d9a441;
   --color-gold-soft: #fbf4e2;
   --color-cream: #fffaf3;
   --color-ink: #1a1a1a;
-  --color-ink-soft: #4b5563;
-  --color-ink-muted: #6b7280;
+  --color-ink-soft: #5c5048;
   --color-line: #ece6dc;
+  --color-line-gold: #e2d4b5;
+  --color-punteado: #c9b9a3;
 
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Bitter', 'Bitter Fallback', Georgia, serif;
+  --font-sans: 'Karla', 'Karla Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --radius-card: 1rem;
-  --radius-card-lg: 1.25rem;
-
-  --shadow-card: 0 1px 2px rgba(154, 88, 32, 0.04), 0 8px 24px rgba(154, 88, 32, 0.06);
   --shadow-cta: 0 4px 14px rgba(155, 28, 28, 0.25);
+}
+
+/* Métricas ajustadas para que el texto no salte cuando entran las fuentes. */
+@font-face {
+  font-family: 'Bitter Fallback';
+  src: local('Georgia');
+  size-adjust: 104%;
+  ascent-override: 90%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Karla Fallback';
+  src: local('Arial');
+  size-adjust: 96%;
+  ascent-override: 98%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@layer components {
+  /* Marco doble de carta impresa. El hijo directo lleva el filete interior. */
+  .marco-carta {
+    @apply border-2 border-gold p-[5px];
+  }
+
+  .marco-carta > * {
+    @apply border border-gold/55;
+  }
+
+  /* Botón rojo «Llamar». El ancestro debe llevar la clase `group`. */
+  .btn-llamar {
+    @apply inline-flex shrink-0 items-center gap-2 rounded-sm bg-brand px-4 py-3
+      text-xs font-bold tracking-wide text-cream uppercase;
+    @apply group-hover:bg-brand-dark;
+    @apply focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none;
+    @apply motion-safe:transition-colors;
+  }
+
+  /* Fila de teléfono: etiqueta y número a la izquierda, botón a la derecha. */
+  .fila-telefono {
+    @apply flex items-center justify-between gap-3 border-b border-line py-3;
+    @apply hover:bg-gold-soft/60;
+    @apply motion-safe:transition-colors;
+  }
+
+  .etiqueta-carta {
+    @apply text-[10px] font-medium tracking-[0.16em] text-gold-ink uppercase;
+  }
+
+  /* Puntos suspensivos entre el nombre del plato y su precio. */
+  .puntos-carta {
+    @apply mx-2 min-w-4 flex-1 translate-y-[-0.3em] border-b border-dotted border-punteado;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--color-cream);
 }
 
 body {
   background: var(--color-cream);
   color: var(--color-ink);
-  font-family: var(--font-sans);
 }

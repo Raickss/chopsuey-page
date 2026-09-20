@@ -256,8 +256,7 @@ export const MENU: MenuCategory[] = [
       },
       {
         name: 'Pollo a la Chop Suey',
-        description:
-          'Pollo frito, bañado en salsa negra, acompañado de papitas fritas en casco.',
+        description: 'Pollo frito, bañado en salsa negra, acompañado de papitas fritas en casco.',
         sizes: [
           { label: 'Grande', price: 70000 },
           { label: 'Mediana', price: 60000 },

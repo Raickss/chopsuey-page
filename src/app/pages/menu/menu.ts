@@ -1,13 +1,24 @@
-import { afterNextRender, Component, DestroyRef, HostListener, inject, signal } from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  DestroyRef,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
+import { AvisoEstafa } from '../../shared/aviso-estafa/aviso-estafa';
+import { NEGOCIO } from '../../shared/business';
+import { IconTelefono } from '../../shared/icons/icon-telefono';
 import { MENU } from './menu.data';
 
 @Component({
   selector: 'app-menu',
-  imports: [],
+  imports: [AvisoEstafa, IconTelefono],
   templateUrl: './menu.html',
 })
 export class Menu {
   protected readonly categories = MENU;
+  protected readonly negocio = NEGOCIO;
   protected readonly isContactOpen = signal(false);
   protected readonly activeCategory = signal<string>(MENU[0].id);
 
@@ -57,8 +68,8 @@ export class Menu {
 
   protected chipClasses(id: string): string {
     return this.activeCategory() === id
-      ? 'font-semibold text-brand'
-      : 'text-ink-muted hover:text-brand';
+      ? 'border-brand font-bold text-brand'
+      : 'border-transparent text-ink-soft hover:text-brand';
   }
 
   protected openContact(): void {
