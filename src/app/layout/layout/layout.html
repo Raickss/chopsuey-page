@@ -1,5 +1,14 @@
 <div class="flex min-h-screen flex-col">
   <app-header />
+
+  <!-- Lo primero de cualquier página: solo se reciben pedidos por llamada. -->
+  <app-aviso-estafa variante="franja">
+    <strong class="font-bold">
+      Para domicilio o para recoger, solo recibimos pedidos por llamada
+    </strong>
+    a nuestros números oficiales. Si te piden pago adelantado por WhatsApp, es una estafa.
+  </app-aviso-estafa>
+
   <main class="flex-1">
     <router-outlet />
   </main>
