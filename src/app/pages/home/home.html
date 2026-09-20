@@ -3,13 +3,7 @@
   <div class="mx-auto max-w-3xl px-6 pt-12 pb-10 md:pt-16">
     <header class="marco-carta">
       <div class="px-6 py-10 text-center md:px-10 md:py-14">
-        <span
-          class="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-brand font-display text-xl font-semibold text-cream"
-          aria-hidden="true"
-        >
-          CS
-        </span>
-        <p class="etiqueta-carta mt-5">Restaurante · Desde {{ foundedIn }}</p>
+        <p class="etiqueta-carta">Restaurante · Desde {{ foundedIn }}</p>
         <h1 class="mt-3 font-display text-4xl leading-[1.08] font-semibold text-brand md:text-6xl">
           Chopsuey Pereira
         </h1>
@@ -178,6 +172,18 @@
       </div>
     </div>
 
+    <!-- Nota anti-estafa -->
+    <div class="mb-6">
+      <app-aviso-estafa variante="nota">
+        <strong class="font-bold">Aviso importante:</strong>
+        solo recibimos pedidos por <strong>llamada</strong> a nuestros números oficiales o
+        directamente en el <strong>local</strong>.
+        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas). Los
+        pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
+        <strong>estafa</strong>.
+      </app-aviso-estafa>
+    </div>
+
     <div class="grid gap-6 md:grid-cols-2">
       <!-- Visítanos -->
       <article class="border border-gold bg-gold-soft/50 p-8">
@@ -294,18 +300,6 @@
           }
         </ul>
       </article>
-    </div>
-
-    <!-- Nota anti-estafa -->
-    <div class="mt-6">
-      <app-aviso-estafa variante="nota">
-        <strong class="font-bold">Aviso importante:</strong>
-        solo recibimos pedidos por <strong>llamada</strong> a los números oficiales de arriba o
-        directamente en el <strong>local</strong>.
-        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas). Los
-        pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
-        <strong>estafa</strong>.
-      </app-aviso-estafa>
     </div>
   </div>
 
