@@ -43,6 +43,115 @@
     </div>
   </header>
 
+  <!-- Aviso anti-estafa -->
+  <div class="mx-auto max-w-3xl px-6 pb-16">
+    <div
+      class="relative overflow-hidden rounded-card-lg border-2 border-amber-300 bg-amber-50 shadow-card"
+      role="alert"
+    >
+      <span class="absolute inset-y-0 left-0 w-1.5 bg-amber-400" aria-hidden="true"></span>
+
+      <div class="flex flex-col gap-4 p-5 sm:flex-row sm:gap-5 sm:p-7">
+        <span
+          class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-400/25 text-amber-700"
+          aria-hidden="true"
+        >
+          <span
+            class="absolute inset-0 rounded-full bg-amber-400/40 motion-safe:animate-ping"
+          ></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="relative h-5 w-5"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </span>
+
+        <div class="min-w-0">
+          <p class="text-[10px] font-semibold tracking-[0.28em] text-amber-700 uppercase">
+            Aviso importante
+          </p>
+          <h2 class="mt-1.5 font-display text-2xl leading-tight text-brand md:text-3xl">
+            Cuidado con las estafas
+          </h2>
+
+          <ul class="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
+            <li class="flex items-start gap-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mt-0.5 h-4 w-4 shrink-0 text-green-700"
+                aria-hidden="true"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>
+                <strong class="font-semibold text-ink">Solo recibimos pedidos por llamada</strong>
+                a nuestros números oficiales, o directamente en el local.
+              </span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="mt-0.5 h-4 w-4 shrink-0 text-brand"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+              <span>
+                <strong class="font-semibold text-ink">Nunca pedimos pago por adelantado.</strong>
+                Si te escriben por WhatsApp y te exigen transferencia, Nequi o consignación antes de
+                entregar, <strong class="font-semibold text-brand">es una estafa</strong>.
+              </span>
+            </li>
+          </ul>
+
+          <a
+            href="#contacto"
+            class="mt-5 inline-flex items-center gap-2 rounded-full border border-brand px-4 py-2 text-xs font-semibold tracking-wide text-brand uppercase transition hover:bg-brand hover:text-white focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none"
+          >
+            Ver números oficiales
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-3.5 w-3.5"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Tradición -->
   <section class="mx-auto max-w-3xl px-6 pt-4 pb-16 text-center">
     <p class="font-display text-7xl leading-none text-brand md:text-8xl">
@@ -63,7 +172,9 @@
     </div>
 
     <div class="mx-auto mt-12 grid max-w-3xl gap-10 sm:grid-cols-3 sm:gap-8">
-      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
+      <article
+        class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7"
+      >
         <span
           class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
@@ -90,7 +201,9 @@
         </p>
       </article>
 
-      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
+      <article
+        class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7"
+      >
         <span
           class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
@@ -118,7 +231,9 @@
         </p>
       </article>
 
-      <article class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7">
+      <article
+        class="rounded-card border border-line bg-white/70 p-6 text-center shadow-card md:p-7"
+      >
         <span
           class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand"
         >
@@ -150,7 +265,7 @@
   </section>
 
   <!-- Contacto -->
-  <div class="mx-auto max-w-4xl px-6 pb-16">
+  <div id="contacto" class="mx-auto max-w-4xl px-6 pt-4 pb-16">
     <div class="mb-10 text-center">
       <p class="text-xs tracking-[0.3em] text-gray-500 uppercase">Contacto</p>
       <h2 class="mt-3 font-display text-3xl text-gray-900 md:text-4xl">Encuéntranos</h2>
@@ -257,9 +372,7 @@
           <h3 class="font-display text-2xl text-gray-900">Llámanos</h3>
         </div>
 
-        <p class="mt-3 text-sm text-gray-500">
-          Para domicilio o para ordenar y pasar a recoger.
-        </p>
+        <p class="mt-3 text-sm text-gray-500">Para domicilio o para ordenar y pasar a recoger.</p>
 
         <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
           <li>
@@ -301,44 +414,12 @@
         </ul>
       </article>
     </div>
-
-    <!-- Nota anti-estafa -->
-    <aside
-      class="mt-6 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-5"
-      role="note"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="mt-0.5 h-5 w-5 shrink-0 text-amber-700"
-        aria-hidden="true"
-      >
-        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-        <line x1="12" y1="9" x2="12" y2="13" />
-        <line x1="12" y1="17" x2="12.01" y2="17" />
-      </svg>
-      <p class="text-sm leading-relaxed text-amber-900">
-        <strong class="font-semibold">Aviso importante:</strong>
-        solo recibimos pedidos por <strong>llamada</strong> a los números oficiales de arriba o
-        directamente en el <strong>local</strong>.
-        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas).
-        Los pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
-        <strong>estafa</strong>.
-      </p>
-    </aside>
   </div>
 
   <!-- CTA final -->
   <section class="mx-auto max-w-3xl px-6 pb-24 text-center">
     <p class="text-xs tracking-[0.3em] text-ink-muted uppercase">¿Listo para pedir?</p>
-    <h2 class="mt-3 font-display text-3xl text-ink md:text-4xl">
-      Explora el menú o llámanos
-    </h2>
+    <h2 class="mt-3 font-display text-3xl text-ink md:text-4xl">Explora el menú o llámanos</h2>
     <div class="mx-auto mt-5 h-px w-12 bg-brand"></div>
     <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
       <a
