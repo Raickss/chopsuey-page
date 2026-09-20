@@ -43,6 +43,6 @@ export class AvisoEstafa {
 
   protected readonly clasesTexto = computed(
     () =>
-      'leading-relaxed text-brand-dark ' + (this.variante() === 'banner' ? 'text-sm' : 'text-xs'),
+      'leading-relaxed text-brand-dark ' + (this.variante() === 'banner' ? 'text-base' : 'text-sm'),
   );
 }

@@ -4,13 +4,13 @@
     <header class="marco-carta">
       <div class="px-6 py-10 text-center md:px-10 md:py-14">
         <span
-          class="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-brand font-display text-xl font-extrabold text-cream"
+          class="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-brand font-display text-xl font-semibold text-cream"
           aria-hidden="true"
         >
           CS
         </span>
         <p class="etiqueta-carta mt-5">Restaurante · Desde {{ foundedIn }}</p>
-        <h1 class="mt-3 font-display text-4xl leading-[1.08] font-extrabold text-brand md:text-6xl">
+        <h1 class="mt-3 font-display text-4xl leading-[1.08] font-semibold text-brand md:text-6xl">
           Chopsuey Pereira
         </h1>
         <div class="mx-auto mt-6 flex w-36 items-center gap-2">
@@ -45,7 +45,7 @@
           </a>
           <a
             [href]="'tel:' + telefonoPrincipal.tel"
-            class="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-ink-soft uppercase transition-colors hover:text-brand"
+            class="inline-flex items-center gap-2 text-sm tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
           >
             <span>o llámanos</span>
             <span class="font-display text-base font-semibold text-ink">
@@ -70,7 +70,7 @@
   <!-- Tradición -->
   <section class="mx-auto max-w-3xl px-6 pb-16 text-center">
     <div class="inline-flex flex-col items-center border-y-2 border-gold px-10 py-4">
-      <p class="font-display text-6xl leading-none font-extrabold text-brand md:text-7xl">
+      <p class="font-display text-6xl leading-none font-semibold text-brand md:text-7xl">
         {{ yearsOfExperience }}
       </p>
       <p class="etiqueta-carta mt-2">Años de tradición</p>
@@ -85,7 +85,7 @@
   <section class="mx-auto max-w-4xl px-6 pb-20">
     <div class="text-center">
       <p class="etiqueta-carta">Cómo pedir</p>
-      <h2 class="mt-3 font-display text-3xl font-extrabold text-brand md:text-4xl">
+      <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">
         Tres formas de disfrutar
       </h2>
       <div class="mx-auto mt-4 flex w-28 items-center gap-2">
@@ -116,7 +116,7 @@
           </svg>
         </span>
         <h3 class="mt-4 font-display text-lg font-semibold text-ink">En el local</h3>
-        <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+        <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Ven al restaurante: come en nuestro salón o compra en caja para llevar.
         </p>
       </article>
@@ -142,7 +142,7 @@
           </svg>
         </span>
         <h3 class="mt-4 font-display text-lg font-semibold text-ink">Para recoger</h3>
-        <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+        <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Llámanos, ordena con anticipación y pasa a recoger cuando esté listo.
         </p>
       </article>
@@ -169,7 +169,7 @@
           </svg>
         </span>
         <h3 class="mt-4 font-display text-lg font-semibold text-ink">A domicilio</h3>
-        <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+        <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Pide por teléfono y te lo llevamos hasta tu puerta.
         </p>
       </article>
@@ -180,7 +180,7 @@
   <div class="mx-auto max-w-4xl px-6 pb-16">
     <div class="mb-10 text-center">
       <p class="etiqueta-carta">Contacto</p>
-      <h2 class="mt-3 font-display text-3xl font-extrabold text-brand md:text-4xl">Encuéntranos</h2>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">Encuéntranos</h2>
       <div class="mx-auto mt-4 flex w-28 items-center gap-2">
         <span class="h-px flex-1 bg-gold/55"></span>
         <span class="h-1 w-1 rotate-45 bg-gold"></span>
@@ -210,7 +210,7 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
-          <h3 class="font-display text-2xl font-extrabold text-brand">Visítanos</h3>
+          <h3 class="font-display text-2xl font-semibold text-brand">Visítanos</h3>
         </div>
 
         <address
@@ -240,7 +240,7 @@
             <p class="font-display text-base font-semibold text-ink">
               {{ negocio.horario.apertura }} – {{ negocio.horario.cierre }}
             </p>
-            <p class="mt-1 text-xs">{{ negocio.horario.nota }}</p>
+            <p class="mt-1 text-sm">{{ negocio.horario.nota }}</p>
           </div>
         </div>
 
@@ -248,7 +248,7 @@
           [href]="negocio.direccion.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.18em] text-ink-soft uppercase transition-colors hover:text-brand"
+          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
         >
           Ver en el mapa
           <svg
@@ -276,10 +276,10 @@
           >
             <app-icon-telefono class="h-5 w-5" />
           </span>
-          <h3 class="font-display text-2xl font-extrabold text-brand">Llámanos</h3>
+          <h3 class="font-display text-2xl font-semibold text-brand">Llámanos</h3>
         </div>
 
-        <p class="mt-3 text-sm text-ink-soft">Para domicilio o para ordenar y pasar a recoger.</p>
+        <p class="mt-3 text-base text-ink-soft">Para domicilio o para ordenar y pasar a recoger.</p>
 
         <ul class="mt-5 border-t-2 border-gold">
           @for (telefono of negocio.telefonos; track telefono.tel) {
@@ -322,7 +322,7 @@
   <!-- CTA final -->
   <section class="mx-auto max-w-3xl px-6 pb-24 text-center">
     <p class="etiqueta-carta">¿Listo para pedir?</p>
-    <h2 class="mt-3 font-display text-3xl font-extrabold text-brand md:text-4xl">
+    <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">
       Explora el menú o llámanos
     </h2>
     <div class="mx-auto mt-5 flex w-28 items-center gap-2">
@@ -353,7 +353,7 @@
       </a>
       <a
         [href]="'tel:' + telefonoPrincipal.tel"
-        class="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-ink-soft uppercase transition-colors hover:text-brand"
+        class="inline-flex items-center gap-2 text-sm tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
       >
         <span>o llámanos</span>
         <span class="font-display text-base font-semibold text-ink">

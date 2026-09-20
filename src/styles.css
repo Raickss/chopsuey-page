@@ -53,7 +53,7 @@
   /* Botón rojo «Llamar». El ancestro debe llevar la clase `group`. */
   .btn-llamar {
     @apply inline-flex shrink-0 items-center gap-2 rounded-sm bg-brand px-4 py-3
-      text-xs font-bold tracking-wide text-cream uppercase;
+      text-sm font-bold tracking-wide text-cream uppercase;
     @apply group-hover:bg-brand-dark;
     @apply focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none;
     @apply motion-safe:transition-colors;
@@ -67,7 +67,7 @@
   }
 
   .etiqueta-carta {
-    @apply text-[10px] font-medium tracking-[0.16em] text-gold-ink uppercase;
+    @apply text-xs font-medium tracking-[0.12em] text-gold-ink uppercase;
   }
 
   /* Puntos suspensivos entre el nombre del plato y su precio. */

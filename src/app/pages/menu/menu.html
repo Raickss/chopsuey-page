@@ -4,7 +4,7 @@
     <header class="marco-carta">
       <div class="px-6 py-8 text-center">
         <p class="etiqueta-carta">{{ negocio.nombre }}</p>
-        <h1 class="mt-3 font-display text-5xl font-extrabold text-brand md:text-6xl">Menú</h1>
+        <h1 class="mt-3 font-display text-5xl font-semibold text-brand md:text-6xl">Menú</h1>
         <div class="mx-auto mt-5 flex w-32 items-center gap-2">
           <span class="h-px flex-1 bg-gold/60"></span>
           <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
@@ -28,7 +28,7 @@
   <nav class="sticky top-0 z-10 border-y border-gold/50 bg-cream">
     <div class="mx-auto max-w-4xl">
       <ul
-        class="flex gap-5 overflow-x-auto px-4 py-2.5 text-[10px] tracking-[0.12em] uppercase [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:justify-center sm:gap-6 sm:py-3 sm:text-xs sm:tracking-[0.18em] md:gap-8"
+        class="flex gap-5 overflow-x-auto px-4 py-2.5 text-xs tracking-[0.1em] uppercase [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:justify-center sm:gap-6 sm:py-3 sm:text-sm sm:tracking-[0.14em] md:gap-8"
       >
         @for (category of categories; track category.id) {
           <li class="shrink-0">
@@ -52,7 +52,7 @@
     @for (category of categories; track category.id) {
       <article [id]="category.id" class="mb-16 scroll-mt-28 last:mb-0">
         <header class="mb-8 text-center">
-          <h2 class="font-display text-3xl font-extrabold text-brand md:text-4xl">
+          <h2 class="font-display text-3xl font-semibold text-brand md:text-4xl">
             {{ category.title }}
           </h2>
           <div class="mx-auto mt-4 flex w-28 items-center gap-2">
@@ -61,7 +61,7 @@
             <span class="h-px flex-1 bg-gold/55"></span>
           </div>
           @if (category.note) {
-            <p class="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink-soft italic">
+            <p class="mx-auto mt-4 max-w-md text-base leading-relaxed text-ink-soft italic">
               {{ category.note }}
             </p>
           }
@@ -83,7 +83,7 @@
               </div>
 
               @if (item.description) {
-                <p class="mt-1.5 text-sm leading-relaxed text-ink-soft">{{ item.description }}</p>
+                <p class="mt-1.5 text-base leading-relaxed text-ink-soft">{{ item.description }}</p>
               }
 
               @if (item.sizes || item.signature) {
@@ -163,7 +163,7 @@
         <!-- Header del modal -->
         <div class="text-center">
           <p class="etiqueta-carta">Contacto</p>
-          <h2 id="contact-modal-title" class="mt-2 font-display text-2xl font-extrabold text-brand">
+          <h2 id="contact-modal-title" class="mt-2 font-display text-2xl font-semibold text-brand">
             Haz tu pedido
           </h2>
           <div class="mx-auto mt-4 flex w-24 items-center gap-2">
@@ -171,7 +171,7 @@
             <span class="h-1 w-1 rotate-45 bg-gold"></span>
             <span class="h-px flex-1 bg-gold/60"></span>
           </div>
-          <p class="mt-4 text-xs text-ink-soft">
+          <p class="mt-4 text-sm text-ink-soft">
             {{ negocio.horario.dias }} · {{ negocio.horario.apertura }} –
             {{ negocio.horario.cierre }}
           </p>
@@ -183,7 +183,7 @@
             <app-icon-telefono class="h-4 w-4" />
             <h3 class="font-display text-lg font-semibold text-ink">Llámanos</h3>
           </div>
-          <p class="mt-1 text-xs text-ink-soft">Para domicilio o para pasar a recoger.</p>
+          <p class="mt-1 text-sm text-ink-soft">Para domicilio o para pasar a recoger.</p>
 
           <ul class="mt-4 border-t-2 border-gold">
             @for (telefono of negocio.telefonos; track telefono.tel) {
@@ -212,7 +212,7 @@
         <!-- Separador con "o" -->
         <div class="my-6 flex items-center gap-3">
           <span class="h-px flex-1 bg-gold/50"></span>
-          <span class="text-[10px] tracking-[0.22em] text-gold-ink uppercase">o</span>
+          <span class="text-xs tracking-[0.18em] text-gold-ink uppercase">o</span>
           <span class="h-px flex-1 bg-gold/50"></span>
         </div>
 
@@ -243,7 +243,7 @@
             [href]="negocio.direccion.mapsUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-2 inline-flex items-center gap-1.5 text-[11px] tracking-[0.22em] text-ink-soft uppercase transition-colors hover:text-brand"
+            class="mt-2 inline-flex items-center gap-1.5 text-xs tracking-[0.16em] text-ink-soft uppercase transition-colors hover:text-brand"
           >
             Ver en el mapa
             <svg
