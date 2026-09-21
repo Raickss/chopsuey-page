@@ -1,31 +1,34 @@
+<!-- En la ruta del menú no se pega: allí manda la barra de categorías. -->
 <header
-  class="z-10 border-b-2 border-gold bg-brand"
+  class="z-20 border-b border-line bg-cream/90 backdrop-blur"
   [class.sticky]="!isMenuRoute()"
   [class.top-0]="!isMenuRoute()"
 >
   <div
-    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3.5 max-[720px]:px-4 max-[720px]:py-3"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 max-[720px]:gap-3 max-[720px]:px-5 max-[720px]:py-3.5"
   >
     <a
       routerLink="/"
-      class="font-display text-base font-semibold tracking-wide text-cream transition-colors hover:text-gold-soft md:text-lg max-[480px]:text-sm"
+      class="titular text-xl transition-colors hover:text-brand max-[720px]:text-base"
     >
       Restaurante Chopsuey Pereira
     </a>
 
-    <nav class="flex items-center gap-5 text-xs tracking-[0.18em] uppercase md:gap-7 md:text-sm">
+    <nav
+      class="flex shrink-0 items-center gap-6 text-[12.5px] tracking-[0.16em] uppercase max-[720px]:gap-4"
+    >
       <a
         routerLink="/"
-        routerLinkActive="text-cream! border-gold!"
+        routerLinkActive="text-brand! border-brand! font-medium"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="border-b-2 border-transparent py-1 text-cream/70 transition-colors hover:text-cream"
+        class="border-b-2 border-transparent pb-0.5 text-ink-muted transition-colors hover:text-brand"
       >
         Inicio
       </a>
       <a
         routerLink="/menu"
-        routerLinkActive="text-cream! border-gold!"
-        class="border-b-2 border-transparent py-1 text-cream/70 transition-colors hover:text-cream"
+        routerLinkActive="text-brand! border-brand! font-medium"
+        class="border-b-2 border-transparent pb-0.5 text-ink-muted transition-colors hover:text-brand"
       >
         Menú
       </a>

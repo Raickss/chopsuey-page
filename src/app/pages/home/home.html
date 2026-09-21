@@ -1,95 +1,70 @@
 <section>
   <!-- Hero -->
-  <div class="mx-auto max-w-3xl px-6 pt-12 pb-10 md:pt-16">
-    <header class="marco-carta">
-      <div class="px-6 py-10 text-center md:px-10 md:py-14">
-        <p class="etiqueta-carta">Restaurante · Desde {{ foundedIn }}</p>
-        <h1 class="mt-3 font-display text-4xl leading-[1.08] font-semibold text-brand md:text-6xl">
-          Chopsuey Pereira
-        </h1>
-        <div class="mx-auto mt-6 flex w-36 items-center gap-2">
-          <span class="h-px flex-1 bg-gold/60"></span>
-          <span class="h-1.5 w-1.5 rotate-45 bg-gold"></span>
-          <span class="h-px flex-1 bg-gold/60"></span>
-        </div>
-        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink-soft md:text-lg">
-          Especialistas en arroz chino y cocina oriental en el corazón de Pereira.
-        </p>
+  <header class="mx-auto max-w-3xl px-6 pt-20 pb-18 text-center md:pt-22">
+    <p class="eyebrow">Restaurante · Desde {{ foundedIn }}</p>
+    <h1 class="titular mt-3.5 text-[2.9rem] leading-[1.05] md:text-[4.1rem]">Chopsuey Pereira</h1>
+    <div class="filete"></div>
+    <p class="mx-auto mt-6.5 max-w-lg text-lg leading-relaxed text-ink-soft">
+      Especialistas en arroz chino y cocina oriental en el corazón de Pereira.
+    </p>
 
-        <div class="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-          <a
-            routerLink="/menu"
-            class="inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-3 text-sm font-bold tracking-wide text-cream shadow-cta transition hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            Ver el menú
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-4 w-4"
-              aria-hidden="true"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-          <a
-            [href]="'tel:' + telefonoPrincipal.tel"
-            class="inline-flex items-center gap-2 text-sm tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
-          >
-            <span>o llámanos</span>
-            <span class="font-display text-base font-semibold text-ink">
-              {{ telefonoPrincipal.display }}
-            </span>
-          </a>
-        </div>
-      </div>
-    </header>
-  </div>
+    <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+      <a routerLink="/menu" class="cta max-sm:w-full max-sm:justify-center">
+        Ver el menú
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a [href]="'tel:' + telefonoPrincipal.tel" class="cta-tel">
+        <span>o llámanos</span>
+        <span class="cifras text-[17px] font-semibold tracking-normal text-ink">
+          {{ telefonoPrincipal.display }}
+        </span>
+      </a>
+    </div>
+  </header>
 
   <!-- Tradición -->
-  <section class="mx-auto max-w-3xl px-6 pb-16 text-center">
-    <div class="inline-flex flex-col items-center border-y-2 border-gold px-10 py-4">
-      <p class="font-display text-6xl leading-none font-semibold text-brand md:text-7xl">
-        {{ yearsOfExperience }}
-      </p>
-      <p class="etiqueta-carta mt-2">Años de tradición</p>
-    </div>
-    <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
-      Desde <span class="font-display font-semibold text-ink">{{ foundedIn }}</span> sirviendo el
-      auténtico arroz chino y los sabores de la cocina oriental a la mesa de los pereiranos.
+  <section class="mx-auto max-w-3xl px-6 pb-18 text-center">
+    <p class="titular cifras text-[4.5rem] leading-none text-brand md:text-8xl">
+      {{ yearsOfExperience }}
+    </p>
+    <div class="mx-auto mt-5 h-0.5 w-14 bg-brand/35"></div>
+    <p class="eyebrow mt-4">Años de tradición</p>
+    <p class="mx-auto mt-5 max-w-[33rem] leading-relaxed text-ink-soft">
+      Desde <span class="font-semibold text-ink">{{ foundedIn }}</span> sirviendo el auténtico arroz
+      chino y los sabores de la cocina oriental a la mesa de los pereiranos.
     </p>
   </section>
 
   <!-- Cómo pedir -->
-  <section class="mx-auto max-w-4xl px-6 pb-20">
+  <section class="mx-auto max-w-4xl px-6 pb-22">
     <div class="text-center">
-      <p class="etiqueta-carta">Cómo pedir</p>
-      <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">
-        Tres formas de disfrutar
-      </h2>
-      <div class="mx-auto mt-4 flex w-28 items-center gap-2">
-        <span class="h-px flex-1 bg-gold/55"></span>
-        <span class="h-1 w-1 rotate-45 bg-gold"></span>
-        <span class="h-px flex-1 bg-gold/55"></span>
-      </div>
+      <p class="eyebrow">Cómo pedir</p>
+      <h2 class="titular mt-3 text-[1.9rem] md:text-[2.4rem]">Tres formas de disfrutar</h2>
     </div>
 
-    <div class="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-3">
-      <article class="border border-gold p-6 text-center md:p-7">
-        <span
-          class="inline-flex h-12 w-12 items-center justify-center border border-gold text-brand"
-        >
+    <!-- Sin sombra: es contenido informativo, no accionable. -->
+    <div class="mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-3">
+      <article class="rounded-card border border-line bg-white p-7 text-center">
+        <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.8"
+            stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
             class="h-5 w-5"
@@ -99,22 +74,20 @@
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
         </span>
-        <h3 class="mt-4 font-display text-lg font-semibold text-ink">En el local</h3>
+        <h3 class="mt-4 text-[17px] font-semibold text-ink">En el local</h3>
         <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Ven al restaurante: come en nuestro salón o compra en caja para llevar.
         </p>
       </article>
 
-      <article class="border border-gold p-6 text-center md:p-7">
-        <span
-          class="inline-flex h-12 w-12 items-center justify-center border border-gold text-brand"
-        >
+      <article class="rounded-card border border-line bg-white p-7 text-center">
+        <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.8"
+            stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
             class="h-5 w-5"
@@ -125,22 +98,20 @@
             <path d="M16 10a4 4 0 0 1-8 0" />
           </svg>
         </span>
-        <h3 class="mt-4 font-display text-lg font-semibold text-ink">Para recoger</h3>
+        <h3 class="mt-4 text-[17px] font-semibold text-ink">Para recoger</h3>
         <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Llámanos, ordena con anticipación y pasa a recoger cuando esté listo.
         </p>
       </article>
 
-      <article class="border border-gold p-6 text-center md:p-7">
-        <span
-          class="inline-flex h-12 w-12 items-center justify-center border border-gold text-brand"
-        >
+      <article class="rounded-card border border-line bg-white p-7 text-center">
+        <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.8"
+            stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
             class="h-5 w-5"
@@ -152,7 +123,7 @@
             <circle cx="18.5" cy="18.5" r="2.5" />
           </svg>
         </span>
-        <h3 class="mt-4 font-display text-lg font-semibold text-ink">A domicilio</h3>
+        <h3 class="mt-4 text-[17px] font-semibold text-ink">A domicilio</h3>
         <p class="mt-2 text-base leading-relaxed text-ink-soft">
           Pide por teléfono y te lo llevamos hasta tu puerta.
         </p>
@@ -161,37 +132,18 @@
   </section>
 
   <!-- Contacto -->
-  <div class="mx-auto max-w-4xl px-6 pb-16">
-    <div class="mb-10 text-center">
-      <p class="etiqueta-carta">Contacto</p>
-      <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">Encuéntranos</h2>
-      <div class="mx-auto mt-4 flex w-28 items-center gap-2">
-        <span class="h-px flex-1 bg-gold/55"></span>
-        <span class="h-1 w-1 rotate-45 bg-gold"></span>
-        <span class="h-px flex-1 bg-gold/55"></span>
-      </div>
+  <div class="mx-auto max-w-4xl px-6 pb-22">
+    <div class="text-center">
+      <p class="eyebrow">Contacto</p>
+      <h2 class="titular mt-3 text-[1.9rem] md:text-[2.4rem]">Encuéntranos</h2>
     </div>
 
-    <!-- Nota anti-estafa -->
-    <div class="mb-6">
-      <app-aviso-estafa variante="nota">
-        <strong class="font-bold">Aviso importante:</strong>
-        para <strong>domicilio</strong> o para <strong>recoger</strong>, solo recibimos pedidos por
-        <strong>llamada</strong> a nuestros números oficiales o directamente en el
-        <strong>local</strong>.
-        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas). Los
-        pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
-        <strong>estafa</strong>.
-      </app-aviso-estafa>
-    </div>
-
-    <div class="grid gap-6 md:grid-cols-2">
+    <!-- Con sombra: aquí sí hay algo que hacer. -->
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
       <!-- Visítanos -->
-      <article class="border border-gold bg-gold-soft/50 p-8">
+      <article class="rounded-card border border-card-line bg-white p-7.5 shadow-card max-sm:p-6">
         <div class="flex items-center gap-3">
-          <span
-            class="inline-flex h-10 w-10 items-center justify-center border border-gold text-brand"
-          >
+          <span class="ficha h-10 w-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -207,17 +159,15 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
-          <h3 class="font-display text-2xl font-semibold text-brand">Visítanos</h3>
+          <h3 class="titular text-[1.6rem]">Visítanos</h3>
         </div>
 
-        <address
-          class="mt-5 font-display text-lg leading-relaxed font-semibold text-ink not-italic"
-        >
+        <address class="mt-5 text-[17px] leading-relaxed font-medium text-ink not-italic">
           {{ negocio.direccion.calle }}<br />
           {{ negocio.direccion.ciudad }} · {{ negocio.direccion.departamento }}
         </address>
 
-        <div class="mt-5 flex items-start gap-2.5 border-t border-line-gold pt-5">
+        <div class="mt-5 flex items-start gap-2.5 border-t border-line-soft pt-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -226,18 +176,18 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="mt-0.5 h-4 w-4 shrink-0 text-brand"
+            class="mt-1 h-4 w-4 shrink-0 text-brand"
             aria-hidden="true"
           >
             <circle cx="12" cy="12" r="10" />
             <polyline points="12 6 12 12 16 14" />
           </svg>
-          <div class="text-sm leading-relaxed text-ink-soft">
+          <div class="text-[15px] leading-relaxed text-ink-soft">
             <p>Abierto {{ negocio.horario.dias.toLowerCase() }}</p>
-            <p class="font-display text-base font-semibold text-ink">
+            <p class="cifras text-base font-semibold text-ink">
               {{ negocio.horario.apertura }} – {{ negocio.horario.cierre }}
             </p>
-            <p class="mt-1 text-sm">{{ negocio.horario.nota }}</p>
+            <p class="mt-1 text-[14px]">{{ negocio.horario.nota }}</p>
           </div>
         </div>
 
@@ -245,7 +195,7 @@
           [href]="negocio.direccion.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
+          class="enlace-sutil mt-5"
         >
           Ver en el mapa
           <svg
@@ -266,35 +216,34 @@
       </article>
 
       <!-- Llámanos -->
-      <article class="border border-gold p-8">
+      <article class="rounded-card border border-card-line bg-white p-7.5 shadow-card max-sm:p-6">
         <div class="flex items-center gap-3">
-          <span
-            class="inline-flex h-10 w-10 items-center justify-center border border-gold text-brand"
-          >
+          <span class="ficha h-10 w-10">
             <app-icon-telefono class="h-5 w-5" />
           </span>
-          <h3 class="font-display text-2xl font-semibold text-brand">Llámanos</h3>
+          <h3 class="titular text-[1.6rem]">Llámanos</h3>
         </div>
 
-        <p class="mt-3 text-base text-ink-soft">Para domicilio o para ordenar y pasar a recoger.</p>
+        <p class="mt-3 text-[15px] text-ink-soft">
+          Para domicilio o para ordenar y pasar a recoger.
+        </p>
 
-        <ul class="mt-5 border-t-2 border-gold">
+        <ul class="mt-5 border-t border-line-soft">
           @for (telefono of negocio.telefonos; track telefono.tel) {
             <li>
               <a
                 [href]="'tel:' + telefono.tel"
                 [attr.aria-label]="'Llamar al ' + telefono.display"
-                class="group fila-telefono px-1"
+                class="group block"
               >
-                <span class="min-w-0">
-                  <span class="etiqueta-carta block">{{ telefono.etiqueta }}</span>
-                  <span class="block font-display text-lg font-semibold text-ink">
-                    {{ telefono.display }}
+                <span class="fila-telefono">
+                  <span class="min-w-0">
+                    <span class="block text-[13px] text-ink-muted">{{ telefono.etiqueta }}</span>
+                    <span class="cifras block text-xl leading-tight font-semibold text-ink">
+                      {{ telefono.display }}
+                    </span>
                   </span>
-                </span>
-                <span class="btn-llamar">
-                  <app-icon-telefono class="h-3.5 w-3.5" />
-                  Llamar
+                  <span class="btn-llamar">Llamar</span>
                 </span>
               </a>
             </li>
@@ -302,24 +251,27 @@
         </ul>
       </article>
     </div>
+
+    <!-- Nota anti-estafa -->
+    <div class="mt-6">
+      <app-aviso-estafa variante="nota">
+        <strong class="font-semibold">Aviso importante:</strong>
+        para <strong>domicilio</strong> o para <strong>recoger</strong>, solo recibimos pedidos por
+        <strong>llamada</strong> a nuestros números oficiales o directamente en el
+        <strong>local</strong>.
+        <strong>No aceptamos ningún pago electrónico</strong> (transferencias, Nequi, tarjetas). Los
+        pedidos por <strong>WhatsApp</strong> o por teléfonos distintos a los oficiales son
+        <strong>estafa</strong>.
+      </app-aviso-estafa>
+    </div>
   </div>
 
   <!-- CTA final -->
-  <section class="mx-auto max-w-3xl px-6 pb-24 text-center">
-    <p class="etiqueta-carta">¿Listo para pedir?</p>
-    <h2 class="mt-3 font-display text-3xl font-semibold text-brand md:text-4xl">
-      Explora el menú o llámanos
-    </h2>
-    <div class="mx-auto mt-5 flex w-28 items-center gap-2">
-      <span class="h-px flex-1 bg-gold/55"></span>
-      <span class="h-1 w-1 rotate-45 bg-gold"></span>
-      <span class="h-px flex-1 bg-gold/55"></span>
-    </div>
+  <section class="mx-auto max-w-3xl px-6 pb-28 text-center">
+    <h2 class="titular text-[1.9rem] md:text-[2.4rem]">Explora el menú o llámanos</h2>
+    <div class="filete"></div>
     <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-      <a
-        routerLink="/menu"
-        class="inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-3 text-sm font-bold tracking-wide text-cream shadow-cta transition hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none"
-      >
+      <a routerLink="/menu" class="cta max-sm:w-full max-sm:justify-center">
         Ver el menú
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -336,12 +288,9 @@
           <polyline points="12 5 19 12 12 19" />
         </svg>
       </a>
-      <a
-        [href]="'tel:' + telefonoPrincipal.tel"
-        class="inline-flex items-center gap-2 text-sm tracking-[0.14em] text-ink-soft uppercase transition-colors hover:text-brand"
-      >
+      <a [href]="'tel:' + telefonoPrincipal.tel" class="cta-tel">
         <span>o llámanos</span>
-        <span class="font-display text-base font-semibold text-ink">
+        <span class="cifras text-[17px] font-semibold tracking-normal text-ink">
           {{ telefonoPrincipal.display }}
         </span>
       </a>

@@ -46,7 +46,7 @@ export class Menu {
             }
           }
         },
-        { rootMargin: '-150px 0px -55% 0px' },
+        { rootMargin: '-96px 0px -55% 0px' },
       );
 
       for (const category of this.categories) {
@@ -68,8 +68,8 @@ export class Menu {
 
   protected chipClasses(id: string): string {
     return this.activeCategory() === id
-      ? 'border-brand font-bold text-brand'
-      : 'border-transparent text-ink-soft hover:text-brand';
+      ? 'border-brand font-semibold text-brand'
+      : 'border-transparent text-ink-muted hover:text-brand';
   }
 
   protected openContact(): void {

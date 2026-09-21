@@ -1,78 +1,107 @@
 @import 'tailwindcss';
 
 @theme {
+  /* Marca. El rojo es acento: botón de llamar y avisos, nada más. */
   --color-brand: #9b1c1c;
   --color-brand-dark: #7a1515;
   --color-brand-soft: #fdf2f2;
-  --color-gold: #b8860b;
-  --color-gold-ink: #8a6508;
-  --color-gold-light: #d9a441;
+  --color-brand-line: #edc9c9;
+
+  /* #b8860b sobre crema daba 3,3:1; este llega a 5,1:1. */
+  --color-gold: #8a6508;
   --color-gold-soft: #fbf4e2;
+
   --color-cream: #fffaf3;
-  --color-ink: #1a1a1a;
-  --color-ink-soft: #5c5048;
-  --color-line: #ece6dc;
-  --color-line-gold: #e2d4b5;
-  --color-punteado: #c9b9a3;
 
-  --font-display: 'Bitter', 'Bitter Fallback', Georgia, serif;
-  --font-sans: 'Karla', 'Karla Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Escala de tinta cálida: antes se mezclaban los grises fríos de Tailwind
+     con los tokens propios, y sobre crema eso se lee desteñido. */
+  --color-ink: #1c1815;
+  --color-ink-strong: #443d37;
+  --color-ink-soft: #57504a;
+  --color-ink-muted: #6f665d;
 
+  --color-line: #e8e2d6;
+  --color-line-soft: #efe9dd;
+  --color-card-line: #e6ded0;
+
+  /* Pie: gris cálido, no el gris azulado que desentonaba con el resto. */
+  --color-night: #262220;
+  --color-night-text: #f3ece1;
+  --color-night-soft: #d9d0c3;
+  --color-night-muted: #a89d8e;
+  --color-night-gold: #dcb463;
+
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius-card: 1rem;
+
+  --shadow-card: 0 1px 2px rgba(154, 88, 32, 0.04), 0 8px 24px rgba(154, 88, 32, 0.06);
   --shadow-cta: 0 4px 14px rgba(155, 28, 28, 0.25);
-}
-
-/* Métricas ajustadas para que el texto no salte cuando entran las fuentes. */
-@font-face {
-  font-family: 'Bitter Fallback';
-  src: local('Georgia');
-  size-adjust: 104%;
-  ascent-override: 90%;
-  descent-override: 24%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Karla Fallback';
-  src: local('Arial');
-  size-adjust: 96%;
-  ascent-override: 98%;
-  descent-override: 25%;
-  line-gap-override: 0%;
+  --shadow-alerta: 0 6px 22px rgba(155, 28, 28, 0.14);
 }
 
 @layer components {
-  /* Marco doble de carta impresa. El hijo directo lleva el filete interior. */
-  .marco-carta {
-    @apply border-2 border-gold p-[5px];
+  /* Titular serif. Cormorant Garamond en peso 400 se ve frágil en tamaños
+     grandes; a 600 y con el tracking cerrado se sostiene. */
+  .titular {
+    @apply font-display font-semibold tracking-[-0.015em] text-ink;
   }
 
-  .marco-carta > * {
-    @apply border border-gold/55;
+  /* Antetítulo. Se conserva como recurso, pero a 0.3em de tracking no se leía. */
+  .eyebrow {
+    @apply text-[12.5px] font-medium tracking-[0.16em] text-ink-muted uppercase;
   }
 
-  /* Botón rojo «Llamar». El ancestro debe llevar la clase `group`. */
-  .btn-llamar {
-    @apply inline-flex shrink-0 items-center gap-2 rounded-sm bg-brand px-4 py-3
-      text-sm font-bold tracking-wide text-cream uppercase;
-    @apply group-hover:bg-brand-dark;
+  /* Filete rojo bajo los títulos. */
+  .filete {
+    @apply mx-auto mt-6 h-0.5 w-14 bg-brand;
+  }
+
+  /* Disco rosa con el icono rojo dentro. */
+  .ficha {
+    @apply inline-flex shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand;
+  }
+
+  /* Botón principal. El blanco va explícito: la regla base de enlaces le
+     ganaba por especificidad y el texto acababa heredando la tinta oscura. */
+  .cta {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5;
+    @apply text-[15px] font-semibold tracking-wide text-white!;
+    @apply shadow-cta motion-safe:transition motion-safe:hover:-translate-y-0.5 hover:bg-brand-dark;
     @apply focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:outline-none;
-    @apply motion-safe:transition-colors;
   }
 
-  /* Fila de teléfono: etiqueta y número a la izquierda, botón a la derecha. */
+  /* «o llámanos 606 341 3352», junto al botón principal. */
+  .cta-tel {
+    @apply inline-flex items-center gap-2 text-[12.5px] tracking-[0.16em] text-ink-soft uppercase;
+    @apply motion-safe:transition-colors hover:text-brand;
+  }
+
+  /* Fila de teléfono: etiqueta y número a la izquierda, botón redondo a la
+     derecha. El ancestro debe llevar la clase `group`. */
   .fila-telefono {
-    @apply flex items-center justify-between gap-3 border-b border-line py-3;
-    @apply hover:bg-gold-soft/60;
-    @apply motion-safe:transition-colors;
+    @apply flex items-center justify-between gap-3 border-b border-line-soft px-1 py-3;
+    @apply motion-safe:transition-colors group-hover:bg-brand-soft;
   }
 
-  .etiqueta-carta {
-    @apply text-xs font-medium tracking-[0.12em] text-gold-ink uppercase;
+  .btn-llamar {
+    @apply inline-flex shrink-0 items-center justify-center rounded-full px-4 py-2;
+    @apply bg-brand-soft text-sm font-semibold text-brand;
+    @apply motion-safe:transition-colors group-hover:bg-brand group-hover:text-white;
   }
 
-  /* Puntos suspensivos entre el nombre del plato y su precio. */
-  .puntos-carta {
-    @apply mx-2 min-w-4 flex-1 translate-y-[-0.3em] border-b border-dotted border-punteado;
+  /* Enlace discreto tipo «Ver en el mapa». */
+  .enlace-sutil {
+    @apply inline-flex items-center gap-1.5 border-b border-card-line pb-0.5;
+    @apply text-[12.5px] font-medium tracking-[0.14em] text-ink-soft uppercase;
+    @apply motion-safe:transition-colors hover:border-brand hover:text-brand;
+  }
+
+  /* Insignia «Especialidad» de los platos de la casa. */
+  .insignia-especialidad {
+    @apply inline-flex items-center gap-1 rounded-full bg-gold-soft px-2.5 py-[3px];
+    @apply text-[11px] font-semibold tracking-wide text-gold uppercase;
   }
 }
 
@@ -84,4 +113,29 @@ html {
 body {
   background: var(--color-cream);
   color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* El texto del aviso se proyecta desde quien lo usa, así que sus reglas no
+   pueden vivir en el componente: la encapsulación emulada no lo alcanzaría.
+   La primera frase ya viene en <strong>; en la franja hace de titular. */
+app-aviso-estafa[data-variante='franja'] p > strong:first-child {
+  display: block;
+  margin-bottom: 0.3125rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-brand);
+}
+
+app-aviso-estafa p > b {
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
+/* Los precios y los teléfonos son columnas de cifras: que no bailen. */
+.cifras {
+  font-variant-numeric: tabular-nums;
 }
