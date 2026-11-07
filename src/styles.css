@@ -74,7 +74,7 @@
 
   /* «o llámanos 606 341 3352», junto al botón principal. */
   .cta-tel {
-    @apply inline-flex items-center gap-2 text-[12.5px] tracking-[0.16em] text-ink-soft uppercase;
+    @apply inline-flex items-center gap-2 py-2 text-[12.5px] tracking-[0.16em] text-ink-soft uppercase;
     @apply motion-safe:transition-colors hover:text-brand;
   }
 
@@ -106,8 +106,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
   background: var(--color-cream);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -116,6 +121,29 @@ body {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   line-height: 1.7;
+}
+
+/* Titulares sin una palabra sola en la última línea; párrafos sin viudas. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+address {
+  text-wrap: pretty;
+}
+
+/* Anillo de foco común para todo lo navegable con teclado. El .cta trae el suyo. */
+a:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+footer a:focus-visible {
+  outline-color: var(--color-night-gold);
 }
 
 /* El texto del aviso se proyecta desde quien lo usa, así que sus reglas no

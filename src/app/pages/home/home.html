@@ -4,7 +4,7 @@
     <p class="eyebrow">Restaurante · Desde {{ foundedIn }}</p>
     <h1 class="titular mt-3.5 text-[2.9rem] leading-[1.05] md:text-[4.1rem]">Chopsuey Pereira</h1>
     <div class="filete"></div>
-    <p class="mx-auto mt-6.5 max-w-lg text-lg leading-relaxed text-ink-soft">
+    <p class="mx-auto mt-6.5 max-w-md text-lg leading-relaxed text-ink-soft">
       Especialistas en arroz chino y cocina oriental en el corazón de Pereira.
     </p>
 
@@ -56,8 +56,8 @@
     </div>
 
     <!-- Sin sombra: es contenido informativo, no accionable. -->
-    <div class="mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-3">
-      <article class="rounded-card border border-line bg-white p-7 text-center">
+    <div class="mt-12 grid gap-6 sm:grid-cols-3">
+      <article class="rounded-card border border-line bg-white p-7 text-center sm:px-6">
         <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
         </p>
       </article>
 
-      <article class="rounded-card border border-line bg-white p-7 text-center">
+      <article class="rounded-card border border-line bg-white p-7 text-center sm:px-6">
         <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@
         </p>
       </article>
 
-      <article class="rounded-card border border-line bg-white p-7 text-center">
+      <article class="rounded-card border border-line bg-white p-7 text-center sm:px-6">
         <span class="ficha h-12 w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,9 @@
     <!-- Con sombra: aquí sí hay algo que hacer. -->
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       <!-- Visítanos -->
-      <article class="rounded-card border border-card-line bg-white p-7.5 shadow-card max-sm:p-6">
+      <article
+        class="flex flex-col items-start rounded-card border border-card-line bg-white p-7.5 shadow-card max-sm:p-6"
+      >
         <div class="flex items-center gap-3">
           <span class="ficha h-10 w-10">
             <svg
@@ -167,7 +169,7 @@
           {{ negocio.direccion.ciudad }} · {{ negocio.direccion.departamento }}
         </address>
 
-        <div class="mt-5 flex items-start gap-2.5 border-t border-line-soft pt-5">
+        <div class="mt-5 flex w-full flex-1 items-start gap-2.5 border-t border-line-soft pt-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
