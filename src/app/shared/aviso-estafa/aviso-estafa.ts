@@ -13,7 +13,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
   selector: 'app-aviso-estafa',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div [class]="clasesCaja()" role="alert">
+    <div [class]="clasesCaja()" role="note" aria-label="Aviso contra estafas">
       <div [class]="clasesInterior()">
         <span [class]="clasesIcono()">
           <svg

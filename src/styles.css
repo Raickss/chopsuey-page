@@ -98,6 +98,18 @@
     @apply motion-safe:transition-colors hover:border-brand hover:text-brand;
   }
 
+  /* Enlace dentro de un párrafo. */
+  .enlace-texto {
+    @apply font-medium tabular-nums text-ink underline decoration-brand/35 decoration-1 underline-offset-[3px];
+    @apply motion-safe:transition-colors hover:text-brand hover:decoration-brand;
+  }
+
+  /* Enlace «Saltar al contenido»: invisible hasta que llega el foco del teclado. */
+  .saltar {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50;
+    @apply focus:rounded-full focus:bg-white focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-brand focus:shadow-card;
+  }
+
   /* Insignia «Especialidad» de los platos de la casa. */
   .insignia-especialidad {
     @apply inline-flex items-center gap-1 rounded-full bg-gold-soft px-2.5 py-[3px];

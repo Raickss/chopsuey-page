@@ -14,16 +14,13 @@
     >
       <a
         routerLink="/"
-        routerLinkActive="text-brand! border-brand! font-medium"
+        routerLinkActive="text-brand! font-medium underline"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="border-b-2 border-transparent pb-0.5 text-ink-muted transition-colors hover:text-brand"
+        class="-my-2.5 py-2.5 text-ink-muted decoration-2 underline-offset-[7px] transition-colors hover:text-brand"
       >
         Inicio
       </a>
-      <a
-        [href]="cartaUrl"
-        class="border-b-2 border-transparent pb-0.5 text-ink-muted transition-colors hover:text-brand"
-      >
+      <a [href]="cartaUrl" class="-my-2.5 py-2.5 text-ink-muted transition-colors hover:text-brand">
         Menú
       </a>
     </nav>

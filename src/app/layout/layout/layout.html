@@ -1,4 +1,6 @@
 <div class="flex min-h-screen flex-col">
+  <!-- Botón y no enlace: con <base href="/">, un href="#contenido" volvería al inicio. -->
+  <button type="button" class="saltar" (click)="contenido.focus()">Saltar al contenido</button>
   <app-header />
 
   <!-- Lo primero de cualquier página: solo se reciben pedidos por llamada. -->
@@ -10,7 +12,7 @@
     Si te piden pago adelantado por WhatsApp, <b>es una estafa</b>.
   </app-aviso-estafa>
 
-  <main class="flex-1">
+  <main #contenido tabindex="-1" class="flex-1 outline-none">
     <router-outlet />
   </main>
   <app-footer />

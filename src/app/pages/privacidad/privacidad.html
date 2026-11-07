@@ -3,31 +3,38 @@
     <p class="eyebrow">{{ negocio.nombre }}</p>
     <h1 class="titular mt-3.5 text-[2.6rem] md:text-[3.25rem]">Política de privacidad</h1>
     <div class="filete"></div>
-    <p class="mt-4.5 text-base text-ink-soft">Tratamiento de datos personales · Última actualización: 25 de septiembre de 2026</p>
+    <p class="mt-4.5 text-base text-ink-soft">
+      Tratamiento de datos personales · Última actualización: 25 de septiembre de 2026
+    </p>
   </header>
 
   <!-- Texto largo: se deja en prosa simple, sin componentes, para que sea fácil de leer y de citar. -->
   <div
-    class="mx-auto max-w-2xl px-6 pb-28 text-[16px] leading-relaxed text-ink-strong [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:text-[1.7rem] [&_li]:mt-1.5 [&_p]:mt-3 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-6"
+    class="mx-auto max-w-2xl px-6 pb-28 text-[16px] leading-relaxed text-ink-strong [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:text-[1.7rem] [&_li]:mt-1.5 [&_p]:mt-3 [&_ul]:mt-3 [&_li]:marker:text-brand/40 [&_ul]:list-disc [&_ul]:pl-6"
   >
     <p>
-      En {{ negocio.nombre }} cuidamos la información que nos compartes cuando haces un pedido,
-      nos escribes por WhatsApp o pides una factura. Esta política explica qué datos recogemos,
-      para qué los usamos y cómo puedes consultarlos, corregirlos o pedir que los borremos, conforme
-      a la Ley 1581 de 2012 y el Decreto 1377 de 2013.
+      En {{ negocio.nombre }} cuidamos la información que nos compartes cuando haces un pedido, nos
+      escribes por WhatsApp o pides una factura. Esta política explica qué datos recogemos, para qué
+      los usamos y cómo puedes consultarlos, corregirlos o pedir que los borremos, conforme a la Ley
+      1581 de 2012 y el Decreto 1377 de 2013.
     </p>
 
     <h2 class="titular">Quién es responsable de tus datos</h2>
     <ul>
-      <li><strong>{{ negocio.nombre }}</strong></li>
-      <li>{{ negocio.direccion.calle }}, {{ negocio.direccion.ciudad }}, {{ negocio.direccion.departamento }}, Colombia</li>
+      <li>
+        <strong>{{ negocio.nombre }}</strong>
+      </li>
+      <li>
+        {{ negocio.direccion.calle }}, {{ negocio.direccion.ciudad }},
+        {{ negocio.direccion.departamento }}, Colombia
+      </li>
       <li>
         WhatsApp y celular:
-        <a class="underline hover:text-gold" [href]="'tel:' + whatsapp.tel">{{ whatsapp.display }}</a>
+        <a class="enlace-texto" [href]="'tel:' + whatsapp.tel">{{ whatsapp.display }}</a>
       </li>
       <li>
         Teléfono fijo:
-        <a class="underline hover:text-gold" [href]="'tel:' + pbx.tel">{{ pbx.display }}</a>
+        <a class="enlace-texto" [href]="'tel:' + pbx.tel">{{ pbx.display }}</a>
       </li>
     </ul>
 
@@ -37,8 +44,8 @@
       <li>La dirección y las indicaciones de entrega de tus domicilios.</li>
       <li>Los mensajes que nos envías por WhatsApp y el detalle de tus pedidos.</li>
       <li>
-        Si pides factura electrónica: tipo y número de documento, razón social, correo electrónico
-        y los demás datos que exige la DIAN.
+        Si pides factura electrónica: tipo y número de documento, razón social, correo electrónico y
+        los demás datos que exige la DIAN.
       </li>
     </ul>
     <p>No pedimos datos sensibles ni recogemos datos de menores de edad de forma intencional.</p>
@@ -48,7 +55,9 @@
       <li>Tomar, preparar y entregar tus pedidos.</li>
       <li>Responder tus mensajes y avisarte cómo va tu pedido.</li>
       <li>Recordar tu dirección para que no tengas que repetirla en cada domicilio.</li>
-      <li>Expedir la factura electrónica y cumplir nuestras obligaciones tributarias y contables.</li>
+      <li>
+        Expedir la factura electrónica y cumplir nuestras obligaciones tributarias y contables.
+      </li>
       <li>
         Enviarte novedades o promociones, solo si nos das tu autorización. Puedes pedir que dejemos
         de enviarlas en cualquier momento.
@@ -57,13 +66,15 @@
 
     <h2 class="titular">Con quién los compartimos</h2>
     <p>
-      No vendemos ni alquilamos tus datos. Solo los compartimos con quienes nos ayudan a prestarte el
-      servicio, y únicamente para eso:
+      No vendemos ni alquilamos tus datos. Solo los compartimos con quienes nos ayudan a prestarte
+      el servicio, y únicamente para eso:
     </p>
     <ul>
       <li>WhatsApp (Meta Platforms), por donde recibimos y respondemos tus mensajes.</li>
       <li>Nuestro proveedor de facturación electrónica y la DIAN, cuando pides factura.</li>
-      <li>El domiciliario que lleva tu pedido, que ve tu nombre, teléfono y dirección de entrega.</li>
+      <li>
+        El domiciliario que lleva tu pedido, que ve tu nombre, teléfono y dirección de entrega.
+      </li>
       <li>Los proveedores de servidores donde guardamos la información de forma segura.</li>
     </ul>
     <p>También los entregaremos a una autoridad cuando la ley nos obligue.</p>
@@ -74,16 +85,19 @@
       <li>Conocer los datos que tenemos sobre ti.</li>
       <li>Actualizarlos o corregirlos.</li>
       <li>Pedir prueba de la autorización que nos diste.</li>
-      <li>Revocar la autorización o pedir que los borremos, salvo cuando la ley nos obligue a conservarlos.</li>
+      <li>
+        Revocar la autorización o pedir que los borremos, salvo cuando la ley nos obligue a
+        conservarlos.
+      </li>
       <li>Presentar quejas ante la Superintendencia de Industria y Comercio.</li>
     </ul>
 
     <h2 id="eliminar-datos" class="titular">Cómo consultar, corregir o borrar tus datos</h2>
     <p>
       Escríbenos por WhatsApp al
-      <a class="underline hover:text-gold" [href]="'tel:' + whatsapp.tel">{{ whatsapp.display }}</a>
-      desde el número que usas con nosotros, o acércate a {{ negocio.direccion.calle }}. Cuéntanos qué
-      necesitas: consultar, corregir o eliminar tu información.
+      <a class="enlace-texto" [href]="'tel:' + whatsapp.tel">{{ whatsapp.display }}</a>
+      desde el número que usas con nosotros, o acércate a {{ negocio.direccion.calle }}. Cuéntanos
+      qué necesitas: consultar, corregir o eliminar tu información.
     </p>
     <ul>
       <li>Las consultas las respondemos en máximo 10 días hábiles.</li>
