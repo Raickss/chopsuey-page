@@ -1,9 +1,4 @@
-<!-- En la ruta del menú no se pega: allí manda la barra de categorías. -->
-<header
-  class="z-20 border-b border-line bg-cream/90 backdrop-blur"
-  [class.sticky]="!isMenuRoute()"
-  [class.top-0]="!isMenuRoute()"
->
+<header class="sticky top-0 z-20 border-b border-line bg-cream/90 backdrop-blur">
   <div
     class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 max-[720px]:gap-3 max-[720px]:px-5 max-[720px]:py-3.5"
   >
@@ -26,8 +21,7 @@
         Inicio
       </a>
       <a
-        routerLink="/menu"
-        routerLinkActive="text-brand! border-brand! font-medium"
+        [href]="cartaUrl"
         class="border-b-2 border-transparent pb-0.5 text-ink-muted transition-colors hover:text-brand"
       >
         Menú

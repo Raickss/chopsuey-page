@@ -32,6 +32,8 @@ export const NEGOCIO = {
     usuario: 'chopsuey.pereira',
     url: 'https://www.instagram.com/chopsuey.pereira',
   },
+  /** La carta vive en izzypos; este sitio solo enlaza a ella. */
+  cartaUrl: 'https://carta.izzypos.com.co/chopsuey',
 } as const satisfies {
   nombre: string;
   fundadoEn: number;
@@ -39,6 +41,7 @@ export const NEGOCIO = {
   horario: Record<string, string>;
   telefonos: readonly Telefono[];
   instagram: Record<string, string>;
+  cartaUrl: string;
 };
 
 export const TELEFONO_PRINCIPAL = NEGOCIO.telefonos[0];
